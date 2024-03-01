@@ -8,7 +8,7 @@
 6. [Sequence To Sequence BERT_RNN](#Seq2Seq_BERT_RNN)
 7. [Response Generation with GPT2](#NLG_GPT2)
    - [Introduction](#intro)
-   - [Whisper](#whisper)
+   - [Dataset](#dataset)
 9. [Results](#results)
 
 
@@ -22,10 +22,11 @@ The database which is used here is the Common Voice database which offers mp3 au
 
 ## <a name='NLG_GPT2'></a> Response Generation with GPT2
 ### <a name='intro'></a> Introduction
-In this Project we will go through the process of **fine-tuning the pretrained GPT2 model** that is available in the HuggingFace Transformers library for response generation. It is a **dialogue system** aiming to generate a response given a context. This is also known as **Natural Language Generation (NLG)**. Here we will consider the smallest pre-trained GPT2 model (GPT-2). In this project I am looking for:
-- Instantiate a pretrained GPT2.
+In this project, we will go through the process of **fine-tuning the pre-trained GPT2 model** that is available in the HuggingFace Transformers library for response generation. It is a **dialogue system** aiming to generate a response given a context. This is also known as **Natural Language Generation (NLG)**. Here we will consider the smallest pre-trained GPT2 model (GPT-2). In this project I am looking for:
+- Instantiate a pre-trained GPT2.
 - Fine-tuning GPT2 on MultiWOZ with SpeechBrain for response generation task.
 
-
+### <a name='dataset'></a> Dataset
+Now we will discuss how to fine-tune the GPT-2  model for response generation. To achieve this, we will be using a smaller version of the MultiWOZ 2.1 dataset. Multi-Domain Wizard-of-Oz dataset (MultiWOZ), a fully-labeled collection of human-human written conversations spanning over multiple domains and topics. Instead of using all the data, we will set a parameter that identifies the percentage of data to be sampled. For this task, we will just sample 1000, 100, 200 of training, valid, and test.
 
 <img src="./Imgs/wav2vec_asr.png" alt="drawing" width="800" height="250"/>
