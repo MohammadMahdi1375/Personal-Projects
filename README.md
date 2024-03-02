@@ -1,23 +1,29 @@
 ## Table of contents
 1. [LSTM Text Classification](#LSTM_Text_Classification)
-   - [Wav2Vec](#wav2vec)
-   - [Whisper](#whisper)
-3. [Sequence To Sequence RNN](#Seq2Seq_RNN)
-4. [Sequence To Sequence Attention_RNN](#Seq2Seq_Attn_RNN)
-5. [Sequence To Sequence Transformer_RNN](#Seq2Seq_Trans_RNN)
-6. [Sequence To Sequence BERT_RNN](#Seq2Seq_BERT_RNN)
-7. [Response Generation with GPT2](#NLG_GPT2)
+2. [Sequence To Sequence RNN](#Seq2Seq_RNN)
+3. [Sequence To Sequence Attention-based RNN](#Seq2Seq_Attn_RNN)
+4. [Sequence To Sequence Transformer_RNN](#Seq2Seq_Trans_RNN)
+5. [Sequence To Sequence BERT_RNN](#Seq2Seq_BERT_RNN)
+6. [Response Generation with GPT2](#NLG_GPT2)
    - [Introduction](#intro)
    - [Dataset](#dataset)
-9. [Results](#results)
 
 
-## <a name='introduction'></a> Introduction
-This Project is about end-to-end speech recognizer, also known as automatic speech recognition(ASR) to process human speech into a written format. We feed a speech signal spoken in the Serbian language into the model to generate the transcription for that. This project has been done by means of the Speechbrain library which is an open-source all-in-one speech toolkit based on PyTorch. It is designed to make the research and development of speech technology easier. This [tutorial](https://speechbrain.readthedocs.io/en/latest/index.html) will provide you with all the very basic elements needed to start using SpeechBrain for your projects.
 
-## <a name='dataset'></a> Dataset
-The database which is used here is the Common Voice database which offers mp3 audio files at 42Hz. 
+## <a name='LSTM_Text_Classification'></a> LSTM Text Classification
+This project aims to classify SMS messages into two classes Spam and ham (legitimate). The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset) which contains one set of SMS messages in English of 5,574 messages. The proposed model is a single-layer bidirectional LSTM model which is followed by a sigmoid activation function (For binary Classification).
 
+## <a name='Seq2Seq_RNN'></a> Sequence To Sequence RNN
+The most common sequence-to-sequence (seq2seq) models are encoder-decoder models, which commonly use an LSTM to encode the source (input) sentence into a single vector called context vector (z). We can think of the context vector as being an abstract representation of the entire input sentence}. This vector is then decoded by a second RNN which learns to output the target (output) sentence by generating it one word at a time. The aim of this project is to translate from Dutch to English.
+<img src="./Imgs/RNN.png" alt="drawing" width="800" height="250"/>
+
+## <a name='Seq2Seq_Trans_RNN'></a> Sequence To Sequence Attention-based RNN
+In this task, we have tried to improve the performance of the Seq2Seq RNN model employing the Attention Model which scores how well the inputs around position j and the output at position i match.
+
+## <a name='Seq2Seq_Trans_RNN'></a> Sequence To Sequence Transformer-based model
+In this task, a Transformer-based model has been used in order to translate from Dutch to English.
+
+## <a name='Seq2Seq_BERT_RNN'></a> Sequence To Sequence using BERT
 
 
 ## <a name='NLG_GPT2'></a> Response Generation with GPT2
