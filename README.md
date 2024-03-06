@@ -24,7 +24,7 @@ In this task, we have tried to improve the performance of the Seq2Seq RNN model 
 In this task, a Transformer-based model has been used in order to translate from Dutch to English.
 
 ## <a name='Seq2Seq_BERT_RNN'></a> Sequence To Sequence using BERT
-
+We will utilize a large metadata-rich collection of fictional conversations extracted from raw movie scripts (220,579 conversational exchanges between 10,292 pairs of movie characters in 617 movies). There are two text files in this dataset, movie_conversations.txt and movie_lines.txt. A consecutive conversation between two users in a movie is given in movie_conversations.txt.
 
 ## <a name='NLG_GPT2'></a> Response Generation with GPT2
 ### <a name='intro'></a> Introduction
