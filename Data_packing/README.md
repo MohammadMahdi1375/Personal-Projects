@@ -10,7 +10,7 @@ The procedure of general way of implementing Data Packing for all types of model
 Here is an example of how it should be applied on input sequences:
 
 Consider the following sequences:
-`
+```
 Sequence 1: "The cat sat"
 Sequence 2: "on the mat."
-`
+```
