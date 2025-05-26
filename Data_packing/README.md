@@ -7,10 +7,18 @@ The procedure of general way of implementing Data Packing for all types of model
 - *Masking:* Adjusting masks to prevent attention across sequence boundaries within the packed sequence.
 - *Position IDs:* Reset or adjust position IDs for each sequence within the packed sequence to ensure correct positional encoding.
 
+## An example of how Data PAcking works?
 Here is an example of how it should be applied on input sequences:
 
 Consider the following sequences:
 ```
 Sequence 1: "The cat sat"
 Sequence 2: "on the mat."
+```
+
+After tokenization and packing, they might become:
+```
+Packed Sequence: "The cat sat <eos> on the mat."
+Attention Mask: [1, 1, 1, 1, 1, 1, 1, 1]
+Position IDs: [0, 1, 2, 0, 1, 2, 3]
 ```
